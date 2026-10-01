@@ -18,7 +18,7 @@ async def setup_hook():
 
 @bot.event
 async def on_ready():
-    print(f"شغال كـ {bot.user}")
+    print(f"Logged in as {bot.user}")
 
 
 @bot.command()
@@ -40,5 +40,11 @@ async def leave(ctx):
         await ctx.send("خرجت 👋")
 
 
-@bot.tree.command
+@bot.tree.command(name="ping", description="Test the bot")
+async def ping(interaction: discord.Interaction):
+    await interaction.response.send_message("Pong! 🏓")
+
+
+bot.run(TOKEN)
+
 
