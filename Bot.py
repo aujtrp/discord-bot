@@ -42,9 +42,13 @@ async def leave(ctx):
 
 @bot.tree.command(name="ping", description="Test the bot")
 async def ping(interaction: discord.Interaction):
-    await interaction.response.send_message("Pong! 🏓")
+    await interaction.response.send_message("Pong!")
 
 
 bot.run(TOKEN)
+
+
+
+
 
 
